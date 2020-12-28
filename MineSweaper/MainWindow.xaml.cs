@@ -19,9 +19,17 @@ namespace MineSweaper
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int level;
         public MainWindow()
         {
             InitializeComponent();
+            
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MineSweaper.GameOption gameOption = new MineSweaper.GameOption();
+            gameOption.ShowDialog();
         }
     }
 }
