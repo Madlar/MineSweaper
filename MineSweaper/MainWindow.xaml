@@ -6,10 +6,17 @@
         xmlns:local="clr-namespace:MineSweaper"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="300">
-    <Grid>
-        <Menu Height="20" VerticalAlignment="Top">
-            <MenuItem Header="Game" Click="MenuItem_Click"></MenuItem>
-            <MenuItem Header="Help"></MenuItem>
+    <Grid x:Name="screen">
+        <Menu x:Name="menubar" Height="20" VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <MenuItem x:Name="menu_game" Header="Game">
+                <MenuItem x:Name="menu_item_newGame" Header="새 게임" Click="NewGame_Click"/>
+                <MenuItem x:Name="menu_item_help" Header="설정" Click="SetUp_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="menu_help" Header="Help"></MenuItem>
         </Menu>
+        <Grid x:Name="panel" Height="150" Margin="0,20,0,0" VerticalAlignment="Top">
+            <Image HorizontalAlignment="Left" Height="100" Margin="19,24,0,0" VerticalAlignment="Top" Width="100" Source="Smile1.ico"/>
+        </Grid>
+        <UniformGrid x:Name="play_board" Margin="10,150,10,10" />
     </Grid>
 </Window>

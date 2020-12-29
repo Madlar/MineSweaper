@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -53,6 +54,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="LocatingBomb.cs" />
+    <Compile Include="Tile.cs" />
     <Page Include="GameOption.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +98,45 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bomb.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kalarm.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smile1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smile2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Smile1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kalarm.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Flag.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

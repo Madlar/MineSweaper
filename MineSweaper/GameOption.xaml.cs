@@ -19,6 +19,10 @@ namespace MineSweaper
     public partial class GameOption : Window
     {
         private int level = 1;
+
+        public delegate void LevelInputHandler(int parameter);
+        public event LevelInputHandler LevelInputEvent;
+
         public GameOption()
         {
             InitializeComponent();
@@ -46,7 +50,9 @@ namespace MineSweaper
 
         private void btn_set_option_Click(object sender, RoutedEventArgs e)
         {
-            Window.GetWindow(this).Close();
+            if (LevelInputEvent != null)
+                LevelInputEvent(level);
+            this.Close();
         }
     }
 }
